@@ -1,9 +1,9 @@
 <h1>Barks and Recreation</h1>
 
 <h2>Welcome, <%= current_owner.username %>!</h2>
-<ul>
+
 Your Dogs:  <% current_owner.dogs.each do |dog| %>
-            <li><%= dog.name %></li>
+            <%= dog.name %>
                   <% end %>
 
 <h3>Do you want to...</h3>

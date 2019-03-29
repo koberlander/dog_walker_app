@@ -3,6 +3,10 @@ class WalksController < ApplicationController
     @walk = Walk.new
   end
 
+  def show
+    @walk = Walk.find(params[:id])
+  end
+
   def create
     @walk = Walk.new(walk_params)
     if @walk.valid?
