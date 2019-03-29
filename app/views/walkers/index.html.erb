@@ -1,0 +1,6 @@
+<h2>All Walkers</h2>
+
+<ul><% @walkers.each do |walker| %>
+  <li><%= link_to walker.name, walker_path(walker[:id]) %></li>
+<% end %>
+</ul>

@@ -1,0 +1,17 @@
+
+<h2>Detail Page for <%= @walker.name %></h2>
+<ul>
+  <li>Name:  <%= @walker.name %></li>
+  <li>Bio:  <%= @walker.bio %></li>
+  <li>Years Experience:  <%= @walker.years_experience %></li>
+</ul>
+
+<%= link_to "[Walkers Index Page]", walkers_path %>
+<%= link_to "[Create a Walk with Walker]", new_walk_path %>
+<%= link_to "[Edit Walker]", edit_walker_path %>
+
+<%= form_tag @walker, method: "DELETE" do %>
+    <%= submit_tag "Delete" %>
+<% end %>
+
+<%# (link_to "[Delete]", walker_path(walker), method: "DELETE") %>

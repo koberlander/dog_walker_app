@@ -1,0 +1,20 @@
+<h2>Create a New Walker!</h2>
+<% if @walker.errors.any? %>
+  <ul>
+    <% @walker.errors.full_messages.each do |message| %>
+    <li><%= message %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= form_for(@walker) do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %></br>
+  <%= f.label :bio %>
+  <%= f.text_area :bio %></br>
+  <%= f.label :years_experience %>
+  <%= f.number_field :years_experience, step: 1.0 %></br>
+  <%= f.submit "Save Changes" %>
+  <% end %>
+
+<%= link_to "[Walkers Index Page]", walkers_path %>

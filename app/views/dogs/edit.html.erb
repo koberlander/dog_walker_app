@@ -1,0 +1,14 @@
+<h2>Edit Details for <%= @dog.name %></h2>
+
+<%= form_for @dog do |f| %>
+  <%= f.label :name %><br>
+  <%= f.text_field :name %></br>
+  <%= f.label :age %><br>
+  <%= f.number_field :age, in: 1..20, step: 1 %></br>
+  <%= f.radio_button :gender, true %><br>
+  <%= f.label :gender, "Male", :value => "false" %>
+  <%= f.radio_button :gender, true %><br>
+  <%= f.label :owner_id %><br>
+  <%= f.collection_select :owner_id, Owner.all, :id, :name%><br><br>
+  <%= f.submit "Save this Dog" %>
+<% end %>

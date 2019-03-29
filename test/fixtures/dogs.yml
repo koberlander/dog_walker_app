@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  breed: MyString
+  walk_length: 1
+  food: false
+  meds: MyString
+  walker_id: 1
+
+two:
+  name: MyString
+  breed: MyString
+  walk_length: 1
+  food: false
+  meds: MyString
+  walker_id: 1

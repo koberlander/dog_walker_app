@@ -1,0 +1,13 @@
+<h2>Detail Page for <%= @dog.name %></h2>
+
+  <strong>Name:</strong>   <%= @dog.name %></br>
+  <strong>Gender:</strong> <%= @dog.gender %></br>
+  <strong>Age:</strong>    <%= @dog.age %><br>
+  <strong>Owner:</strong>  <%= @dog.owner.name %><br>
+  <div>
+    <strong>Medications:</strong>  <%= @dog.med.name %><br>
+
+</div>
+<br>
+  <%= link_to '[Edit]', edit_dog_path %>
+  <%= link_to '[Delete]', dog_path(params[:id]), method:"DELETE" %>
