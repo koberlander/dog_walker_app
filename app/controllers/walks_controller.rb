@@ -8,6 +8,14 @@ class WalksController < ApplicationController
   end
 
   def create
+    # params[:walk][:dog_ids].each do |dog_id|
+    #   if !dog_id.empty?
+    #       Walk.create!(walk_params, dog_id: dog_id.to_i)
+    #   end
+    # end
+
+
+
     @walk = Walk.new(walk_params)
     if @walk.valid?
       @walk.save

@@ -5,7 +5,7 @@
 <%= f.label :walker_id %><br>
 <%= f.collection_select(:walker_id, Walker.all, :id, :name) %><br><br>
 <%= f.label :dog_id %><br>
-<%= f.collection_select(:dog_id, current_owner.dogs, :id, :name) %><br><br>
+<%= f.collection_radio_buttons(:dog_id, current_owner.dogs, :id, :name) %><br><br>
 <%= f.label :walk_length %><br>
 <%= f.number_field(:walk_length, in: 10..30, step: 10) %> minutes<br><br>
 <%= f.submit "Submit" %>
