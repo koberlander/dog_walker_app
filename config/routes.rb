@@ -9,5 +9,5 @@ Rails.application.routes.draw do
   get '/home', to: 'application#home', as: 'home'
   get '/login', to: 'sessions#new'
   post '/login', to: 'sessions#create', as: 'session'
-  delete '/logout', to: 'sessions#new'
+  delete '/logout', to: 'sessions#destroy'
 end

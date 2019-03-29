@@ -14,20 +14,14 @@ class SessionsController < ApplicationController
       session[:owner_id] = @owner.id
        redirect_to home_path
      else
+       flash[:notice] = "No username/password found with that combination"
        render :new
      end
   end
 
-  def current_owner
-
-  end
-
-  def logged_in?
-
-  end
-
-  def authorized
-
+  def destroy
+    session.clear
+    redirect_to login_path
   end
 
 end

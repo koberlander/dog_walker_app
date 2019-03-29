@@ -2,10 +2,15 @@
 
 <h2>Welcome, <%= current_owner.username %>!</h2>
 
-Your Dogs:  <% current_owner.dogs.each do |dog| %>
-            <%= dog.name %>
+<h3>Your Dogs: </h3> <ul>
+            <% current_owner.dogs.each do |dog| %>
+            <li><%= dog.name %></li>
                   <% end %>
+</ul>
 
-<h3>Do you want to...</h3>
-<%= link_to "Create a Walk", new_walk_path %><br>
-<%= link_to "Add New Dog", new_dog_path %>
+
+<h3>Do you want to...</h3><ul>
+  <li><%= link_to "Create a Walk", new_walk_path %><br></li>
+  <li><%= link_to "Add New Dog", new_dog_path %></li>
+  <li><%= link_to "Logout", logout_path, method: :delete %></li>
+</ul>

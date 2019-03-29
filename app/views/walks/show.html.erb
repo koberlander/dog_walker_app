@@ -1,7 +1,9 @@
 <h2>Walk Created!</h2>
 
-Walker: <%= @walk.walker.name %><br>
+<b>Walker:</b> <%= @walk.walker.name %><br>
 
-Dog: <%= @walk.dog.name %><br>
+<b>Dog:</b> <%= @walk.dog.name %><br>
 
-Duration in minutes: <%= @walk.walk_length %><br>
+<b>Duration in minutes:</b> <%= @walk.walk_length %><br>
+
+<%= link_to "Back to Home", home_path %>
